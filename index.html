@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Académica Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Estilos para os quadrados de informações */
+        .info-box {
+            background-color: #f4f4f9;  /* Cor de fundo suave para as caixas */
+            color: #333;  /* Cor do texto */
+            border: 1px solid #ddd;  /* Borda leve para as caixas */
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .info-box h2 {
+            color: #007bff; /* Cor do título das caixas */
+        }
+
+        /* Ajustes para os inputs */
+        input.form-control, textarea.form-control {
+            font-size: 14px;  /* Reduzindo o tamanho da fonte */
+            padding: 8px 10px;  /* Reduzindo o padding para menor altura */
+            margin-bottom: 15px;  /* Distância entre os campos */
+            background-color: #f9f9f9;  /* Cor de fundo suave */
+            border: 1px solid #ccc;  /* Borda suave */
+            border-radius: 4px;
+        }
+
+        /* Estilo do botão */
+        button[type="submit"] {
+            background-color: #007bff;  /* Cor de fundo do botão */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;  /* Cor do botão ao passar o mouse */
+        }
+
+
+        /* Formulário estilizado */
+        /* Estilos do formulário */
+        #contact-form {
+            background-color: #f4f7fc; /* Cor de fundo suave */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        #contact-form h2 {
+            font-size: 26px;
+            color: #0056b3;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Label estilizado */
+        .form-label {
+            font-size: 16px;
+            font-weight: bold; /* Negrito */
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        /* Caixa de entrada (inputs) */
+        .form-control {
+            border-radius: 5px;
+            padding: 12px 15px;
+            font-size: 14px;
+            background-color: #e9f1f9; /* Cor de fundo suave para inputs */
+            border: 1px solid #0056b3;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Estilizando o botão de envio */
+        button[type="submit"] {
+            background-color: #0056b3;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: white;
+            border-radius: 5px;
+            width: 100%;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #004085;
+        }
+
+        /* Margens e espaçamentos para as seções do formulário */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Aumento de espaço entre as opções de redes sociais */
+        .social-icons a {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        
+/* Para dispositivos menores, como smartphones */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Ajusta os itens em coluna */
+    }
+
+    h1 {
+        font-size: 24px; /* Diminui o tamanho da fonte */
+    }
+}
+
+/* Para telas maiores, como desktops */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row; /* Ajusta os itens em linha */
+    }
+}
+
+body {
+    font-size: 1rem; /* Adapta-se à base definida no navegador */
+}
+
+.container {
+    width: 100%; /* Adapta-se ao tamanho do dispositivo */
+}
+
+
+
+
+        /* Alterações nos botões para interação mais visual */
+        button[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div id="dynamic-background" class="dynamic-bg"></div>
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1>Consultoria Académica Online</h1>
+            <div class="social-icons">
+                <a href="https://chat.whatsapp.com/KSkHWgf0umkDg9fehXK6HU" target="_blank" class="text-white mx-2" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61569750804101" target="_blank" class="text-white mx-2" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/abdul_narupuatxa/" target="_blank" class="text-white mx-2" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:narupuatxaabdul@gmail.com" class="text-white mx-2" title="E-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="info-box p-4">
+                    <h2>Sobre Nós</h2>
+                    <p>A Consultoria Académica Online é uma iniciativa pessoal dedicada à prestação de serviços acadêmicos 100% online, com foco na qualidade, personalização e resultados comprovados.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="info-box p-4">
+                    <h2>Objetivo</h2>
+                    <p>Ajudar estudantes a alcançarem seus objetivos acadêmicos e profissionais por meio de suporte personalizado, garantindo qualidade e resultados excepcionais.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="info-box p-4">
+                    <h2>Por que escolher a Consultoria Académica Online?</h2>
+                    <ul>
+                        <li><strong>Resultados Garantidos</strong>: Suporte para alcançar sucesso acadêmico e profissional.</li>
+                        <li><strong>Descontos Especiais</strong>: Aproveite 25% de desconto em todos os nossos serviços.</li>
+                        <li><strong>Atendimento Personalizado</strong>: Serviços adaptados à sua área de estudo e objetivos acadêmicos.</li>
+                        <li><strong>Confiança e Ética</strong>: Trabalhos realizados com rigor acadêmico e sem plágio.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="info-box p-4">
+                    <h2>Serviços Oferecidos</h2>
+                    <ul>
+                        <li><strong>Produção Acadêmica e Pesquisas</strong>
+                            <ul>
+                                <li>Trabalhos de Pesquisa</li>
+                                <li>Realização de Testes e Exames</li>
+                                <li>Projetos de Pesquisa</li>
+                                <li>Monografias (TCC e Dissertações)</li>
+                                <li>Elaboração de Artigos Científicos</li>
+                                <li>Resumos e Resenhas Acadêmicas</li>
+                                <li>Criação de Apresentações em PowerPoint</li>
+                            </ul>
+                        </li>
+                        <li><strong>Monitorização e Suporte Acadêmico</strong>
+                            <ul>
+                                <li>Acompanhamento de Plataformas Acadêmicas</li>
+                                <li>Orientação em Projetos de Web Design</li>
+                                <li>Programação e Computação</li>
+                            </ul>
+                        </li>
+                        <li><strong>Traduções</strong>: Tradução Português-Inglês e Inglês-Português</li>
+                        <li><strong>Outros Serviços</strong>
+                            <ul>
+                                <li>Esclarecimento de dúvidas acadêmicas</li>
+                                <li>Compartilhamento de informações e atualizações relevantes</li>
+                                <li>Consultoria em Metodologia Científica</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="info-box p-4">
+                    <h2>Diferenciais da Nossa Consultoria</h2>
+                    <ul>
+                        <li><strong>Flexibilidade e Conforto</strong>: Serviços realizados totalmente online.</li>
+                        <li><strong>Economia</strong>: Sem custos adicionais para esclarecimento de dúvidas e atualizações.</li>
+                        <li><strong>Qualidade Garantida</strong>: Trabalho realizado com rigor acadêmico, sempre respeitando prazos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <!-- Formulário de Contato -->
+        <form id="contact-form" class="bg-light p-4">
+            <h2>Deixe a sua mensagem em caso de duvida!</h2>
+            <div class="mb-3 form-group">
+                <label for="name" class="form-label">Nome do Estudante</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome completo" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label for="course" class="form-label">Curso e Nível Acadêmico</label>
+                <input type="text" class="form-control" id="course" name="course" placeholder="Informe seu curso e nível acadêmico" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label for="contact" class="form-label">Número de Contato</label>
+                <input type="tel" class="form-control" id="contact" name="contact" placeholder="Digite seu número de contato" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label for="university" class="form-label">Universidade</label>
+                <input type="text" class="form-control" id="university" name="university" placeholder="Informe sua universidade" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label for="message" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Escreva sua mensagem aqui" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </main>
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Consultoria Académica Online. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
